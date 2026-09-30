@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ================= NAVBAR ================= */
+
+nav {
+  background: #111827;
+  color: white;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #1f2937;
+}
+
+nav h2 {
+  font-size: 22px;
+  color: #60a5fa;
+}
+
+nav div {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: #cbd5e1;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  color: #60a5fa;
+}
+
+/* ================= MAIN ================= */
+
+#root {
+  min-height: 100vh;
+}
+
+#root > div:not(nav) {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 35px 20px;
+}
+
+h1 {
+  margin-bottom: 25px;
+  font-size: 30px;
+  color: #f8fafc;
+}
+
+h2 {
+  color: #f8fafc;
+  margin-bottom: 10px;
+}
+
+h3 {
+  color: #f8fafc;
+}
+
+/* ================= DASHBOARD ================= */
+
+#root > div:not(nav) > div {
+  margin-bottom: 20px;
+}
+
+.dashboard-card {
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.dashboard-card p {
+  font-size: 30px;
+  font-weight: bold;
+  color: #60a5fa;
+}
+
+/* ================= INPUTS ================= */
+
+input,
+select,
+textarea {
+  background: #1e293b;
+  color: #e5e7eb;
+  border: 1px solid #475569;
+  border-radius: 7px;
+  padding: 11px 13px;
+  margin: 5px 8px 15px 0;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #94a3b8;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+textarea {
+  width: 100%;
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* ================= TICKET CARDS ================= */
+
+.ticket-card {
+  background: #1e293b;
+  padding: 20px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.ticket-card:hover {
+  border-color: #475569;
+}
+
+.ticket-card h3 {
+  margin-bottom: 12px;
+}
+
+.ticket-card p {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  color: #cbd5e1;
+}
+
+/* ================= BUTTONS ================= */
+
+button {
+  border: none;
+  border-radius: 7px;
+  padding: 10px 16px;
+  background: #2563eb;
+  color: white;
+  margin: 5px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* ================= FORMS ================= */
+
+form {
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #cbd5e1;
+}
+
+form input,
+form select {
+  width: 100%;
+}
+
+/* ================= HORIZONTAL LINE ================= */
+
+hr {
+  border: none;
+  border-top: 1px solid #334155;
+  margin: 20px 0;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px 20px;
+  }
+
+  nav div {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  input,
+  select {
+    width: 100%;
+  }
+}
